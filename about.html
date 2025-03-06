@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Elaiza's Cozy Home</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="https://sdk.scdn.co/spotify-player.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</head>
+<body>
+    <div class="loading-screen">
+        <div class="loading-content">
+            <h1>About Us</h1>
+            <div class="loading-bar">
+                <div class="loading-progress"></div>
+            </div>
+        </div>
+    </div>
+
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="roomlogo.png" alt="Room Logo" class="logo-img">
+                Elaiza's Cozy Home
+            </div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html" class="active">About</a>
+                <a href="#reviews">Reviews</a>
+                <a href="#explore">Explore</a>
+                <a href="#contact">Contact</a>
+                <button class="book-now">Book Now</button>
+            </div>
+        </nav>
+    </header>
+
+    <main class="about-main">
+        <div class="about-content" data-aos="fade-up" data-aos-duration="1000">
+            <div class="about-header">
+                <h1 data-aos="zoom-in" data-aos-delay="300">About Us</h1>
+                <a href="index.html#home" class="back-btn" data-aos="fade-left" data-aos-delay="500">Back</a>
+            </div>
+            <div class="about-description">
+                <p data-aos="fade-up" data-aos-delay="400">Welcome to our rental properties, where comfort, convenience, and quality living come together. Whether you're looking for a cozy studio, a spacious two-bedroom condominium, or a charming house, we have the perfect place for you to call home.</p>
+                
+                <p data-aos="fade-up" data-aos-delay="500">Our properties are designed to provide a relaxing and enjoyable living experience, with all the amenities you need for a comfortable stay. Each property is fully equipped with modern appliances, offering a hassle-free living experience from the moment you step in.</p>
+                
+                <h3 class="properties-title" data-aos="fade-right" data-aos-delay="600">Our Properties:</h3>
+                <ul class="properties-list">
+                    <li class="property-item" data-aos="fade-left" data-aos-delay="700">
+                        <strong>Eliza's Cozy Home:</strong> A stylish and comfortable studio-type condominium, perfect for solo travelers or couples seeking a peaceful retreat.
+                    </li>
+                    <li class="property-item" data-aos="fade-left" data-aos-delay="800">
+                        <strong>Two-Bedroom Condo:</strong> Spacious and well-lit, ideal for small families or groups looking for a modern and relaxing space.
+                    </li>
+                    <li class="property-item" data-aos="fade-left" data-aos-delay="900">
+                        <strong>House for Rent:</strong> A cozy and spacious home with plenty of room for families, offering privacy and comfort for a long-term stay.
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="features" data-aos="fade-up" data-aos-delay="1000">
+                <h2 data-aos="fade-right" data-aos-delay="1100">Our Features</h2>
+                <ul>
+                    <li data-aos="zoom-in" data-aos-delay="1200">24/7 Customer Service</li>
+                    <li data-aos="zoom-in" data-aos-delay="1300">Premium Pool Access</li>
+                    <li data-aos="zoom-in" data-aos-delay="1400">High-Speed WiFi</li>
+                    <li data-aos="zoom-in" data-aos-delay="1500">Parking Lot</li>
+                    <li data-aos="zoom-in" data-aos-delay="1600">Fully Equipped Kitchens</li>
+                    <li data-aos="zoom-in" data-aos-delay="1700">Central Location</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <section class="living-room-section">
+        <div class="section-header">
+            <span class="subtitle">ELIZA'S COZY HOME</span>
+            <h2>The Most Memorable Rest<br>Time Starts Here.</h2>
+        </div>
+        
+        <div class="room-cards">
+            <div class="room-card">
+                <img src="room2.jpg" alt="Studio Haven" class="room-image" onclick="openModal(this.src)">
+                <div class="room-icons">
+                    <span class="icon">❤️</span>
+                </div>
+                <h3>Studio Haven</h3>
+                <p>Experience comfort and elegance in this stylish studio condo, offering serene ocean views from your private space. Perfect for relaxation and rejuvenation.</p>
+                <div class="card-footer">
+                    <div class="price">Starting from <span>$42.56/night</span></div>
+                    <button class="book-now">Book Now</button>
+                </div>
+            </div>
+
+            <div class="room-card">
+                <img src="camella.jpg" alt="Cozy Home" class="room-image" onclick="openModal(this.src)">
+                <div class="room-icons">
+                    <span class="icon">❤️</span>
+                </div>
+                <h3>Cozy Corner</h3>
+                <p>Discover warmth and tranquility in this cozy house for rent, featuring a welcoming ambiance and ample space for families. Perfect for creating lasting memories in a peaceful neighborhood.</p>
+                <div class="card-footer">
+                    <div class="price">Starting from <span>$510.69/night</span></div>
+                    <button class="book-now">Book Now</button>
+                </div>
+            </div>
+
+            <div class="room-card">
+                <img src="bedroom.jpg" alt="City View Suite" class="room-image" onclick="openModal(this.src)">
+                <div class="room-icons">
+                    <span class="icon">❤️</span>
+                </div>
+                <h3>Two Bedroom Condom</h3>
+                <p>Experience spacious comfort and modern elegance in this inviting two-bedroom condo. Enjoy serene city views from your private balcony, perfect for relaxation and unwinding with loved ones.</p>
+                <div class="card-footer">
+                    <div class="price">Starting from <span>$85.12/night</span></div>
+                    <button class="book-now">Book Now</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="map-section">
+        <div class="map-container">
+            <div class="map-content">
+                <h2>Find Us Here</h2>
+                <p>Explore our location and discover nearby attractions</p>
+                <div class="map-controls">
+                    <button class="map-btn" onclick="openFullMap()">
+                        <i class="fas fa-expand-arrows-alt"></i> View Larger Map
+                    </button>
+                    <button class="map-btn" onclick="getDirections()">
+                        <i class="fas fa-directions"></i> Get Directions
+                    </button>
+                </div>
+                <div class="map-frame">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3959.6744095840825!2d125.58341661477489!3d7.053572394878165!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x32f9730014966dbf%3A0x5ef5721391a462ed!2sMatina%20Enclaves%20Bldg%20C!5e0!3m2!1sen!2sph!4v1624251234567!5m2!1sen!2sph"
+                        width="100%" 
+                        height="450" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                        class="interactive-map">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="imageModal" class="modal">
+        <span class="close-modal">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
+
+    <div class="music-controls">
+        <div class="volume-container">
+            <input type="range" id="volumeSlider" min="0" max="100" value="50" class="volume-slider">
+            <div class="volume-tooltip">Volume: 50%</div>
+        </div>
+        <button id="toggleMusic" class="music-toggle">
+            <svg class="volume-icon" viewBox="0 0 24 24">
+                <path class="volume-path" d="M14,3.23V5.29C16.89,6.15 19,8.83 19,12C19,15.17 16.89,17.84 14,18.7V20.77C18,19.86 21,16.28 21,12C21,7.72 18,4.14 14,3.23M16.5,12C16.5,10.23 15.5,8.71 14,7.97V16C15.5,15.29 16.5,13.76 16.5,12M3,9V15H7L12,20V4L7,9H3Z"/>
+            </svg>
+        </button>
+    </div>
+
+    <audio id="backgroundMusic" loop>
+        <source src="musichaha.mp3" type="audio/mpeg">
+    </audio>
+
+    <script src="https://sdk.scdn.co/spotify-player.js"></script>
+    <script src="script.js"></script>
+    <script>
+        function openModal(imgSrc) {
+            const modal = document.getElementById('imageModal');
+            const modalImg = document.getElementById('modalImage');
+            modal.style.display = "flex";
+            modalImg.src = imgSrc;
+        }
+
+        // Close modal when clicking the close button
+        document.querySelector('.close-modal').onclick = function() {
+            document.getElementById('imageModal').style.display = "none";
+        }
+
+        // Close modal when clicking outside the image
+        document.getElementById('imageModal').onclick = function(e) {
+            if (e.target === this) {
+                this.style.display = "none";
+            }
+        }
+
+        function openFullMap() {
+            window.open('https://www.google.com/maps?q=Matina+Enclaves+Bldg+C&z=15', '_blank');
+        }
+
+        function getDirections() {
+            // Coordinates for Matina Enclaves Bldg C
+            const destination = 'Matina+Enclaves+Bldg+C+Davao+City';
+            window.open(`https://www.google.com/maps/dir/?api=1&destination=${destination}`, '_blank');
+        }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAPS_API_KEY"></script>
+    <script>
+        // Initialize and add the map
+        function initMap() {
+            // The location of Matina Enclaves
+            const matinaEnclaves = { lat: 7.053572349566339, lng: 125.58590593969251 };
+            
+            // The map, centered at Matina Enclaves
+            const map = new google.maps.Map(document.getElementById("map"), {
+                zoom: 17,
+                center: matinaEnclaves,
+            });
+            
+            // The marker, positioned at Matina Enclaves
+            const marker = new google.maps.Marker({
+                position: matinaEnclaves,
+                map: map,
+                title: "Matina Enclaves Bldg C"
+            });
+        }
+
+        // Call initMap when the page loads
+        window.onload = initMap;
+    </script>
+    <script>
+        AOS.init({
+            once: true,
+            offset: 100,
+            duration: 800,
+            easing: 'ease-in-out'
+        });
+    </script>
+</body>
+</html>

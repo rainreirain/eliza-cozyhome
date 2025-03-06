@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elaiza's Cozy Home</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://sdk.scdn.co/spotify-player.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <audio id="backgroundMusic" loop autoplay>
+        <source src="musichaha.mp3" type="audio/mpeg">
+    </audio>
+    <div class="welcome-overlay">
+        <div class="loading-content">
+            <div class="welcome-text" style="color: white;">Welcome to</div>
+            <div class="loading-bar" style="margin: 20px auto;">
+                <div class="loading-progress"></div>
+            </div>
+            <div class="creator-names">
+                Your <span class="name-highlight">Future Home</span>
+            </div>
+            <div class="loading-dots">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+        </div>
+    </div>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="roomlogo.png" alt="Room Logo" class="logo-img">
+                Elaiza's Cozy Home
+            </div>
+            <div class="nav-links">
+                <a href="#home" class="active">Home</a>
+                <a href="about.html">About</a>
+                <a href="#reviews">Reviews</a>
+                <a href="#explore">Explore</a>
+                <a href="#contact">Contact</a>
+                <button class="book-now">Book Now</button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1 class="animate-text">
+                <span class="text-line">A Home of Comfort,</span>
+                <span class="text-line">Elegance, and</span>
+                <span class="text-line">Modern <span class="highlight">Living.</span></span>
+            </h1>
+            
+            <div class="booking-card">
+                <div class="booking-input">
+                    <label data-sublabel="Check In">
+                        <span>
+                            <img src="calendar.png" alt="Calendar" class="input-icon">
+                            CHECK-IN
+                        </span>
+                        <input type="date" id="checkIn" placeholder="mm/dd/yyyy">
+                    </label>
+                </div>
+                <div class="booking-input">
+                    <label data-sublabel="Check Out">
+                        <span>
+                            <img src="calendar.png" alt="Calendar" class="input-icon">
+                            CHECK-OUT
+                        </span>
+                        <input type="date" id="checkOut" placeholder="mm/dd/yyyy">
+                    </label>
+                </div>
+                <div class="booking-input">
+                    <label data-sublabel="Guest">
+                        <span>
+                            <img src="guest.png" alt="Guest" class="input-icon">
+                            GUEST
+                        </span>
+                        <select id="guests">
+                            <option value="1">1 Guest</option>
+                            <option value="2">2 Guests</option>
+                            <option value="3">3 Guests</option>
+                            <option value="4">4 Guests</option>
+                            <option value="5">5 Guests</option>
+                        </select>
+                    </label>
+                </div>
+                <button class="check-out-btn">CHECK OUT</button>
+            </div>
+        </section>
+    </main>
+    
+    <div class="music-controls">
+        <div class="volume-container">
+            <input type="range" id="volumeSlider" min="0" max="100" value="50" class="volume-slider">
+            <div class="volume-tooltip">Volume: 50%</div>
+        </div>
+        <button id="toggleMusic" class="music-toggle">
+            <svg class="volume-icon" viewBox="0 0 24 24">
+                <path class="volume-path" d="M14,3.23V5.29C16.89,6.15 19,8.83 19,12C19,15.17 16.89,17.84 14,18.7V20.77C18,19.86 21,16.28 21,12C21,7.72 18,4.14 14,3.23M16.5,12C16.5,10.23 15.5,8.71 14,7.97V16C15.5,15.29 16.5,13.76 16.5,12M3,9V15H7L12,20V4L7,9H3Z"/>
+            </svg>
+        </button>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const welcomeOverlay = document.querySelector('.welcome-overlay');
+            
+            // Show welcome overlay immediately
+            welcomeOverlay.style.display = 'flex';
+            welcomeOverlay.style.opacity = '1';
+            document.body.classList.add('content-loaded');
+            
+            // Hide welcome overlay after delay
+            setTimeout(() => {
+                welcomeOverlay.style.opacity = '0';
+                setTimeout(() => {
+                    welcomeOverlay.style.display = 'none';
+                }, 1000);
+            }, 3000); // Show for 3 seconds
+        });
+
+        // Music state initialization
+        if (!localStorage.getItem('musicState')) {
+            localStorage.setItem('musicState', 'playing');
+            localStorage.setItem('musicVolume', '50');
+        }
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
